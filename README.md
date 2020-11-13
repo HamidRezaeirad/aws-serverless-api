@@ -91,7 +91,7 @@ aws-serverless-api/docs
 
 ## Accessibly
 
-Web application is accessible through below URL and port
+Endpoints are accessible through below URL and port
 <br/>
 [https://hif39tok0k.execute-api.ap-southeast-1.amazonaws.com/dev/private](https://hif39tok0k.execute-api.ap-southeast-1.amazonaws.com/dev/private) Auth
 <br/>
