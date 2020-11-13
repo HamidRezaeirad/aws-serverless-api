@@ -1,0 +1,19 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "author": "Hamid Rezaeirad <hamid.rezaeirad@gmail.com>",
+  "description": "Auth project",
+  "license": "MIT",
+  "dependencies": {
+    "@middy/core": "^1.1.0",
+    "@middy/http-cors": "^1.4.0",
+    "@middy/http-error-handler": "^1.1.0",
+    "@middy/http-event-normalizer": "^1.1.0",
+    "@middy/http-json-body-parser": "^1.1.0",
+    "@middy/validator": "^1.1.0",
+    "jsonwebtoken": "^8.1.0"
+  },
+  "devDependencies": {
+    "serverless-bundle": "^2.0.0"
+  }
+}

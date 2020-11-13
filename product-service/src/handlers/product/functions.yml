@@ -1,0 +1,26 @@
+createProduct:
+  handler: src/handlers/product/createProduct.handler
+  events:
+    - http:
+        path: product
+        method: POST
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+getProducts:
+  handler: src/handlers/product/getProducts.handler
+  events:
+    - http:
+        path: products
+        method: GET
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+deleteProduct:
+  handler: src/handlers/product/deleteProduct.handler
+  events:
+    - http:
+        method: DELETE
+        path: product/{id}
+        cors: true
+        authorizer: ${self:custom.authorizer}
