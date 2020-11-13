@@ -39,8 +39,8 @@ Use [Git](https://git-scm.com/) to clone project in local machine.
 
 ```bash
 git init
-git clone https://gitlab.com/hamid.rezaeirad.28/challenge.git
-cd challenge
+git clone https://github.com/HamidRezaeirad/aws-serverless-api.git
+cd aws-serverless-api
 ```
 
 ## Configuration
