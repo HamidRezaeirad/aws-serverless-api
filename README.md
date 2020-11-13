@@ -49,7 +49,7 @@ cd aws-serverless-api
 Database Configuration:
 
 Please add mongodb connection string as below:
-challenge/product-service/config/dev.json
+aws-serverless-api/product-service/config/dev.json
 {
 "DB": "mongodb://localhost:27017/smqm"
 }
@@ -57,7 +57,7 @@ challenge/product-service/config/dev.json
 Auth0 public key:
 
 Please add public key to secret.pem
-challenge/auth-service/secret.pem
+aws-serverless-api/auth-service/secret.pem
 
 ```
 
@@ -74,7 +74,7 @@ sls deploy -v
 
 ## Postman Document
 
-challenge/docs
+aws-serverless-api/docs
 
 ## Endpoints:
 
