@@ -1,0 +1,62 @@
+createWarehouse:
+  handler: src/handlers/warehouse/createWarehouse.handler
+  events:
+    - http:
+        method: POST
+        path: warehouse
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+getWarehouses:
+  handler: src/handlers/warehouse/getWarehouses.handler
+  events:
+    - http:
+        method: GET
+        path: warehouses
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+getWarehouse:
+  handler: src/handlers/warehouse/getWarehouse.handler
+  events:
+    - http:
+        method: GET
+        path: warehouse/{id}
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+deleteWarehouse:
+  handler: src/handlers/warehouse/deleteWarehouse.handler
+  events:
+    - http:
+        method: DELETE
+        path: warehouse/{id}
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+addProductToWarehouse:
+  handler: src/handlers/warehouse/addProductToWarehouse.handler
+  events:
+    - http:
+        method: POST
+        path: addproduct/warehouse/{warehouse_id}/product/{product_id}
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+getStock:
+  handler: src/handlers/warehouse/getStock.handler
+  events:
+    - http:
+        method: GET
+        path: stock/warehouse/{warehouse_id}/product/{product_id}
+        cors: true
+        authorizer: ${self:custom.authorizer}
+
+unstock:
+  handler: src/handlers/warehouse/unstock.handler
+  events:
+    - http:
+        method: PATCH
+        path: unstock/warehouse/{warehouse_id}/product/{product_id}
+        cors: true
+        authorizer: ${self:custom.authorizer}

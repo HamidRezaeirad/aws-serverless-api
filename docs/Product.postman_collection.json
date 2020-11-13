@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "9874c7d4-0078-4431-8d0b-cc2f167576c2",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Delete product by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AUTH_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/dev/product/5f92ca5fbbdd1e1881961927",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dev",
+								"product",
+								"5f92ca5fbbdd1e1881961927"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AUTH_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/dev/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dev",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AUTH_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Dell2\",\n    \"code\":\"123456\",\n    \"description\":\"3244\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/dev/product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dev",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Warehous",
+			"item": [
+				{
+					"name": "Get warehouse by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AUTH_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/dev/warehouse/5f91956ba2cce3000863b47e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dev",
+								"warehouse",
+								"5f91956ba2cce3000863b47e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all warehouses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AUTH_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/dev/warehouses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dev",
+								"warehouses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add warehouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AUTH_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test 1\",\n    \"location\":\"KL\",\n    \"description\":\"test Tech\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/dev/warehouse",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dev",
+								"warehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete warehouse by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{AUTH_TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/dev/warehouse/5f95240969009d410b1a2ff3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dev",
+								"warehouse",
+								"5f95240969009d410b1a2ff3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8da4e69-a377-4868-945f-4f27fc42653c",
+						"exec": [
+							"var body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable('AUTH_TOKEN', body.event.headers.Authorization.replace(\"Bearer \", \"\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImYwSWR3cXhjanRsODE1NzhDanFVVyJ9.eyJuaWNrbmFtZSI6Im1hc29vbWkuZWxhaGVoIiwibmFtZSI6Im1hc29vbWkuZWxhaGVoQGdtYWlsLmNvIiwicGljdHVyZSI6Imh0dHBzOi8vcy5ncmF2YXRhci5jb20vYXZhdGFyLzYxZDIxNTk0YWM2ZTk0OTVmMDdmN2U4YmI4N2MxN2E4P3M9NDgwJnI9cGcmZD1odHRwcyUzQSUyRiUyRmNkbi5hdXRoMC5jb20lMkZhdmF0YXJzJTJGbWEucG5nIiwidXBkYXRlZF9hdCI6IjIwMjAtMTAtMjVUMDk6MDA6NDMuOTc1WiIsImVtYWlsIjoibWFzb29taS5lbGFoZWhAZ21haWwuY28iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImlzcyI6Imh0dHBzOi8vc21xbS5hdS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWY4ZDZhM2YzYzNmOTYwMDY5YTg0OWQyIiwiYXVkIjoiMkxjNEZ0NWczdndwVUlMcHJhWDJzbzZ3djBJMXhQTjUiLCJpYXQiOjE2MDM2MTY0NDQsImV4cCI6MTYwMzY1MjQ0NCwibm9uY2UiOiJUMEZPTUUxWFFtSlFlbk5xY0RGWlUweE9iMFozU2tSMU0xUjBabkJmZWkxdlZXMWxXRUZ2V1RKdlV3PT0ifQ.OgQM1KeIKR1dxPse7pyxwmdYXvgbHG2woNX0I9Gp_j7wOC7H0ndj92CAS65T4DrkBsxp33Xam7jmOy0ni5nqfJg8sAAYx7wOqptNeVHDqxt6LsQ-C2zPHOHdY9-ncEnDGk-o2bJ1IGfdwe8ZF-JR4nghrvgz4Fb6zcWYyOzwe4qulA0YQXiQUEV_D33ptmZ-nSj_Q-_J5vNoY4ejpMUJGJRS5BiB_fQGve_NmYDN7ueOMYN1ylliVO0TOueZ8-WOkM9h2SBrO6rUat-C650A_AeYWb15pSy3Qb9CTFtCBzsC_ZsLPTqdVZboYcwbwOo4AlivjpnyHn0AAMhGt8S-XQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://hif39tok0k.execute-api.ap-southeast-1.amazonaws.com/dev/private",
+					"protocol": "https",
+					"host": [
+						"hif39tok0k",
+						"execute-api",
+						"ap-southeast-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"private"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add product to warehouse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"qty\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dev/addproduct/warehouse/5f93923d1016f50f2262340b/product/5f939229192f1d0f22b382b7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dev",
+						"addproduct",
+						"warehouse",
+						"5f93923d1016f50f2262340b",
+						"product",
+						"5f939229192f1d0f22b382b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unsctock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"qty\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dev/unstock/warehouse/5f93923d1016f50f2262340b/product/5f939229192f1d0f22b382b7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dev",
+						"unstock",
+						"warehouse",
+						"5f93923d1016f50f2262340b",
+						"product",
+						"5f939229192f1d0f22b382b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{AUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/dev/stock/warehouse/5f93923d1016f50f2262340b/product/5f93921611be8d0f22b8e6cc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"dev",
+						"stock",
+						"warehouse",
+						"5f93923d1016f50f2262340b",
+						"product",
+						"5f93921611be8d0f22b8e6cc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

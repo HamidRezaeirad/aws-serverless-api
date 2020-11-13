@@ -1,0 +1,26 @@
+service: product-service
+
+plugins:
+  - serverless-offline
+  - serverless-bundle
+  - serverless-pseudo-parameters
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128
+  timeout: 10
+  stage: ${opt:stage, 'dev'}
+  region: ap-southeast-1
+  environment:
+    DB: ${file(./config/${opt:stage, self:provider.stage, 'dev'}.json):DB}
+    NODE_ENV: ${opt:stage, 'dev'}
+
+functions:
+  - ${file(./src/handlers/product/functions.yml)}
+  - ${file(./src/handlers/warehouse/functions.yml)}
+
+custom:
+  authorizer: arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:auth-service-${self:provider.stage}-auth
+  bundle:
+    linting: false
